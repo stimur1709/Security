@@ -28,6 +28,14 @@ public class PersonService {
     @Transactional
     public void register(Person person) {
         person.setPassword(passwordEncoder.encode(person.getPassword()));
+        if (getTotalUser() == 0)
+            person.setRole("ROLE_ADMIN");
+        else
+            person.setRole("ROLE_USER");
         personRepository.save(person);
+    }
+
+    public long getTotalUser() {
+        return personRepository.findAll().size();
     }
 }

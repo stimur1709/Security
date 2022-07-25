@@ -30,4 +30,6 @@ public class Person {
 
     @NotEmpty(message = "Пароль не может быть пустым")
     private String password;
+
+    private String role;
 }
