@@ -22,11 +22,12 @@ public class Person {
     private int id;
 
     @NotEmpty(message = "Login не может быть пустым")
-    private String login;
+    private String username;
 
     @Email(message = "Email введен не правильно")
     @NotEmpty(message = "Email не может быть пустым")
     private String email;
 
+    @NotEmpty(message = "Пароль не может быть пустым")
     private String password;
 }

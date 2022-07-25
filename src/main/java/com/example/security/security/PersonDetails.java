@@ -25,7 +25,7 @@ public class PersonDetails implements org.springframework.security.core.userdeta
 
     @Override
     public String getUsername() {
-        return this.person.getLogin();
+        return this.person.getUsername();
     }
 
     @Override
